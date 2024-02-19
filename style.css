@@ -1,0 +1,176 @@
+/* .attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    /* ## Gradients */
+    --Light-slate-blue-background: hsl(252, 53%, 53%);
+    --Light-royal-blue-background: hsl(241, 62%, 51%);
+
+    --Violet-blue-circle: hsl(253, 70%, 48%);
+    --Persian-blue-circle: hsla(240, 64%, 8%, 0);
+
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(227, 82%, 2%);
+ }
+body{
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-wrap: wrap;
+    height: 100vh;
+    font-size: 1rem;
+    color: var(--Light-lavender);
+    /* background-color: rgb(56, 56, 66); */
+   
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+   
+    column-gap: 3.5rem;
+}
+.card1{
+    border:1px solid var(--Cobalt-blue);
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    background-image: linear-gradient(to top,var(--Light-royal-blue-background),var(--Light-slate-blue-background) 60%);
+}
+
+.card1 p:first-child{
+    font-size: 1.3rem;
+}
+.card1 h1{
+    margin-bottom: 0.7rem;
+}
+.circle{
+    width: 150px;
+    border: var(--Violet-blue-circle);
+    height: 150px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    margin: 1.2rem 0;
+    background-image: linear-gradient( var(--Violet-blue-circle),var(--Persian-blue-circle));
+    /* background-color: hsla(241, 72%, 46%, 0.26); */
+
+}
+.circle p:first-child{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.summary{
+    line-height: 3.5;
+    position: relative;
+    display: grid;
+    place-content: center;
+    margin-inline: auto;
+    margin-top: 3rem;
+
+}
+.summary div{
+    width: 100%;
+}
+.summary h1{
+    font-weight: 100;
+    color: black;
+    position: absolute;
+    left: -20px;
+    top: -65px;
+    font-size: 23px;
+    
+
+}
+.common{
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 4rem;
+    white-space: nowrap;
+    position: relative;
+}
+.common p span{
+    font-weight: bold;
+    color: #333;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-image: linear-gradient(to top,var(--Light-royal-blue-background) 10%,var(--Light-slate-blue-background) 90%);
+   
+}
+button:hover{
+    transition: all 1s ;
+    background-color: blue;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+svg{
+    margin-right: 10px;
+    position: relative;
+    top: 6px;
+}
+.reaction div{
+    color: var(--Light-red);
+}
+.memory div{
+    color: var( --Orangey-yellow);
+}
+.verbal div{
+    color: var( --Green-teal);
+}
+.visual div{
+    color: var( --Cobalt-blue);
+}
+.circle:hover{
+    transform: scale(1.2);
+    transition: all 1s ;
+}
+@media screen and (min-width: 280px) {
+    .card1{
+        width: 100vw;
+        border-radius: 0 0 20px 20px;
+        margin-bottom: 2rem;
+    }
+}
+@media screen and (min-width: 450px) {
+    .card1{
+        width:300px;
+        border-radius:20px;
+    }
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 3.5rem;
+    }
+    body{
+        align-items: center;
+        justify-content: center;
+    }
+}
